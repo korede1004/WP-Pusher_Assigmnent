@@ -1,0 +1,327 @@
+:root {
+  --text-color: #1d2c3c;
+  --external-text-color: #646e7a;
+  --text-color-white: #ffffff;
+  --btn-bg-color: #038e7d;
+  --bg-color: #1179bf;
+  --bg-main-color: #f5f8fa;
+  --hr-color: #f5f7fa;
+  --border-color: #548bc5;
+  --input-bg-color: #edeff2;
+  --second-hr-color: #b9f5ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-main-color);
+  max-width: 100%;
+  padding-inline: 40px;
+  padding-block-start: 28px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-end: 28px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
+}
+nav ul li:not(.account) {
+  padding-block-start: 14px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav ul li + li {
+  margin-inline-start: 44px;
+}
+nav ul li button {
+  background-color: transparent;
+  padding-block: 11px;
+  padding-inline: 19px;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: 2px solid var(--external-text-color);
+  border-radius: 6px;
+}
+nav ul li button:hover {
+  cursor: pointer;
+  background-color: var(--btn-bg-color);
+  color: var(--text-color-white);
+  border: none;
+}
+main {
+  width: 892px;
+  margin: 0 auto;
+  background-color: var(--text-color-white);
+  color: var(--text-color);
+  display: grid;
+  grid-template-areas: "a b";
+  margin-block-start: 85px;
+  margin-block-end: 33px;
+  border-radius: 6px;
+}
+.checkout-section {
+  width: 580px;
+  grid-area: a;
+}
+.checkout-section h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-shadow: 0px 4px 4px #00000040;
+  padding-block: 41.5px;
+  padding-inline-start: 48px;
+}
+hr {
+  height: 2px;
+  background-color: var(--hr-color);
+}
+
+.one {
+  margin-block-start: 35px;
+  display: flex;
+}
+.one p {
+  margin-inline-start: 49px;
+  margin-inline-end: 10px;
+  margin-block-end: 9px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  border: 2px solid var(--border-color);
+  color: var(--border-color);
+}
+.one h2 {
+  font-size: 1.125rem;
+}
+form label {
+  display: block;
+  padding-block-end: 7px;
+}
+.name {
+  display: flex;
+  padding-inline: 48px;
+  gap: 30px;
+  padding-block-end: 15px;
+}
+.name input {
+  width: 227px;
+  padding-block: 10px;
+  padding-inline-start: 13px;
+  padding-inline-end: 27px;
+  outline: none;
+  background-color: var(--input-bg-color);
+  border: none;
+  border-radius: 6px;
+}
+.name input:hover {
+  border: 1px solid var(--border-color);
+}
+.email {
+  padding-inline: 48px;
+  padding-block-end: 41px;
+  > label {
+    font-weight: 400;
+  }
+  > input {
+    border-radius: 6px;
+    width: 77%;
+    padding-block: 10px;
+    padding-inline-start: 13px;
+    padding-inline-end: 27px;
+    outline: none;
+    background-color: var(--input-bg-color);
+    border: none;
+  }
+  > input:hover {
+    border: 1px solid var(--border-color);
+  }
+}
+.payment .one {
+  padding-block-end: 21px;
+}
+.credit-card {
+  padding-inline: 48px;
+}
+
+.credit-card-flex {
+  width: 100%;
+  border-radius: 6px;
+  background-color: var(--input-bg-color);
+  padding-block: 10px;
+  margin-block-end: 41px;
+  > input {
+    padding-block: 9px;
+    outline: none;
+    height: 17px;
+    border: none;
+    background-color: var(--input-bg-color);
+  }
+  > input:hover {
+    border: 1px solid var(--border-color);
+  }
+  > input:not(:first-child) {
+    text-align: right;
+  }
+  > input:last-child {
+    width: 36px;
+    margin-inline-start: 15px;
+  }
+  > input:first-child {
+    margin-inline-end: 95px;
+    margin-inline-start: 13px;
+  }
+  > input:not(:last-child) {
+    width: 154px;
+  }
+}
+.button-section {
+  padding-inline: 48px;
+  padding-block-start: 39px;
+}
+.button-section button {
+  margin-block-end: 23px;
+  width: 100%;
+  padding-block: 15px;
+  background-color: var(--btn-bg-color);
+  color: var(--text-color-white);
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+}
+.button-section button:hover {
+  cursor: pointer;
+  background-color:var(--btn-bg-color);
+}
+.button-content {
+  display: flex;
+  gap: 10px;
+  width: 333px;
+  margin: 0 auto;
+  > p {
+    padding-block-start: 20px;
+  }
+}
+.trademark {
+  padding-block-start: 25px;
+  padding-block-end: 46.9px;
+  text-align: center;
+}
+
+.freelancer-section {
+  grid-area: b;
+  background-color: var(--bg-color);
+  color: var(--text-color-white);
+  padding-inline-start: 44px;
+  padding-inline-end: 37px;
+  text-align: left;
+  > h3 {
+    padding-block-start: 42px;
+    padding-block-end: 5px;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+.subscription hr {
+  height: 2px;
+  background-color: var(--second-hr-color);
+}
+.ninety-nine {
+  display: flex;
+}
+.dollar {
+  padding-block-start: 18px;
+  padding-inline-end: 10px;
+}
+#nine {
+  font-size: 3.75rem;
+}
+.Auto {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 24px;
+  padding-block-end: 36px;
+}
+
+.freelancer-section ul {
+  list-style: none;
+  font-size: 1rem;
+  > li {
+    display: flex;
+    padding-block-end: 16px;
+  }
+  > li p {
+    padding-inline-start: 11px;
+  }
+}
+
+.need {
+  font-size: 1rem;
+  padding-block-start: 28px;
+  padding-block-end: 42px;
+  > p {
+    padding-block-end: 16px;
+  }
+  > a {
+    color: var(--text-color-white);
+    text-decoration: none;
+    border-bottom: 4px solid #b9f5ff;
+  }
+}
+.ftp {
+  font-size: 1.1875rem;
+  font-style: italic;
+  line-height: 24px;
+  padding-block-start: 43px;
+  > p {
+    padding-block-end: 17px;
+  }
+}
+
+.kirk-profile {
+  display: flex;
+  gap: 14px;
+  padding-block-end: 143px;
+  > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  > p {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    font-style: normal;
+    padding-block-start: 10px;
+  }
+}
+footer {
+  text-align: center;
+  > p span {
+    padding-inline: 10px;
+  }
+}
+footer p a {
+  color: var(--btn-bg-color);
+  text-decoration: none;
+  padding-block-end: 139px;
+}
