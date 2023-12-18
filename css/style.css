@@ -212,7 +212,7 @@ form label {
 }
 .button-section button:hover {
   cursor: pointer;
-  background-color:var(--btn-bg-color);
+  background-color:var(--text-color);
 }
 .button-content {
   display: flex;
